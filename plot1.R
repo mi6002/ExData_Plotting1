@@ -1,6 +1,6 @@
 # plot1.R - Histogram of Global Active Power
-
-##This is included to ensure that the code is self-contained
+## Usage: It is assumed that the data.table package has been installed
+## The following line is included to ensure that the code is self-contained
 library(data.table)
 
 # Read data, convert dates and subset on two days in February 2007
