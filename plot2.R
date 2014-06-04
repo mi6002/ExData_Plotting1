@@ -24,7 +24,7 @@ plot(data$DateTime,
      pch=NA, 
      xlab="", 
      ylab="Global Active Power (kilowatts)")
-lines(data$DateTime, data$Global_active_power)
+     lines(data$DateTime, data$Global_active_power)
 
 ## Close PNG file device
 dev.off()
