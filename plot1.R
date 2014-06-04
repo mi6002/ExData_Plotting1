@@ -4,7 +4,7 @@
 library(data.table)
 
 ##Read data, convert dates and subset on two days in February 2007
-data <- read.table('household_power_consumption.txt', sep=';', header=T, 
+data <- read.table('./household_power_consumption.txt', sep=';', header=T, 
                    colClasses = c('character', 'character', 'numeric',
                                   'numeric', 'numeric', 'numeric',
                                   'numeric', 'numeric', 'numeric'),
