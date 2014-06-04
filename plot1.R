@@ -1,9 +1,13 @@
 ## plot1.R - Histogram of Global Active Power
 
+<<<<<<< HEAD
 ##This is included to ensure that the code is self-contained
 library(data.table)
 
 ## Read data, convert dates and subset on two days in February 2007
+=======
+## Read data, convert dates
+>>>>>>> a9d1702b7bce47b58e0df33da5c3c3e6c03a2192
 data <- read.table('household_power_consumption.txt', sep=';', header=T, 
                    colClasses = c('character', 'character', 'numeric',
                                   'numeric', 'numeric', 'numeric',
@@ -11,6 +15,8 @@ data <- read.table('household_power_consumption.txt', sep=';', header=T,
                                   na.strings='?')
 data$DateTime <- strptime(paste(data$Date, data$Time), 
                           "%d/%m/%Y %H:%M:%S")
+
+##subset on the two days in February 2007
 data <- subset(data, 
                as.Date(DateTime) >= as.Date("2007-02-01") & 
                  as.Date(DateTime) <= as.Date("2007-02-02"))
