@@ -4,11 +4,11 @@
 library(data.table)
 
 ## Read data, convert dates and subset on two days in February 2007
-data <- read.table('./household_power_consumption.txt', sep=';', header=T, 
-                   colClasses = c('character', 'character', 'numeric',
-                                  'numeric', 'numeric', 'numeric',
-                                  'numeric', 'numeric', 'numeric'),
-                                  na.strings='?')
+data <- read.table("./household_power_consumption.txt", sep=";", header=T, 
+                   colClasses = c("character", "character", "numeric",
+                                  "numeric", "numeric", "numeric",
+                                  "numeric", "numeric", "numeric"),
+                   na.strings="?")
 data$DateTime <- strptime(paste(data$Date, data$Time), 
                           "%d/%m/%Y %H:%M:%S")
 data <- subset(data, 
@@ -24,7 +24,7 @@ plot(data$DateTime,
      pch=NA, 
      xlab="", 
      ylab="Global Active Power (kilowatts)")
-     lines(data$DateTime, data$Global_active_power)
+lines(data$DateTime, data$Global_active_power)
 
 ## Close PNG file device
 dev.off()
